@@ -6,7 +6,7 @@
  *	list      l[string|int]e      array
  *	directory d[list|string|int]e array
  */
-class BJSONparser
+class BSONparser
 {
 	private $fileHandler;
 	private $file;
