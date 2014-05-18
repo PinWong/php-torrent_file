@@ -19,7 +19,7 @@ class BSONparser
     private $typeStack = array( 0 => 'O' );
     private $currentDKey = null;
 
-    private $objectData = array();       // 返回结果
+    public $objectData = array();       // 返回结果
     private $handlerStack;
 
 	function __construct($file)
@@ -38,6 +38,10 @@ class BSONparser
         fclose($this->fileHandler);
 
         return $this->_run();
+	}
+
+	public functioin result() {
+		return $this->objectData;
 	}
 
     private function _run()
